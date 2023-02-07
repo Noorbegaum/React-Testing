@@ -8,7 +8,7 @@ describe("Main Greet", () => {
     //create a virtual dom of the greet component against which we test our assertions
     render(<Greet />);
     const textElement = screen.getByText(/hello/i); //text in red is a regex that matches the string ignoring the case
-    expect(textElement).toBeInTheDocument(); //the expect method is to test our assertions and after the dot is the matcher function
+    expect(textElement).toBeInTheDocument(); //the expect method is to test our assertions
   });
   describe("Nested Greet", () => {
     test("Greet renders with followed by a name", () => {
@@ -20,7 +20,7 @@ describe("Main Greet", () => {
 });
 
 describe("Multiple Greet", () => {
-    it("Greet renders with followed by a name", () => { //it is an alternative for test to execute .only on it use fit and for .skip use xit
+    test("Greet renders with followed by a name", () => {
       render(<Greet name="noor" />);
       const textElement = screen.getByText("Hello noor");
       expect(textElement).toBeInTheDocument();

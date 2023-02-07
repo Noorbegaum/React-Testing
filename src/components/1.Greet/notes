@@ -1,2 +1,28 @@
-* Test Watch Mode - it is an option thet we can pass to jest asking to watch the files that have been changed since the last commit and execute the test only on those commits.
-->this makes our test runs faster
+- Assertions - when writing the test we often need to check the values meet certain conditions. Assertions decide whether the test passes or fails
+  ->Assertions are written using expect(value) function, where value is the expected values your code produces
+  ->expect is written along with a matcher function to assert something about a value
+  ->Ex: toBeInTheDocument() is a matcher function
+
+- What to test?
+  ->Test component renders
+  ->Test component renders with props
+  ->Test component renders in different states
+  ->Test component reacts to events
+
+- What not to test?
+  ->implementation details
+  ->third party libarary
+  ->tests that are not imp by users pov
+
+- RTL Queries
+  ->Qieries are the methods that testing library provides to find element on the page
+  ->Types:
+    1.To get the single element on the page
+        ->getBy..
+        ->queryBy..
+        ->findBy..
+    2.To get the multiple element on the page
+        ->getAllBy..
+        ->queryAllBy..
+        ->findAllBy..
+    ->the two dots is the suffix that can be one of the Role,LabelText,PlaceHolderText,Text,DisplayValue,AltText,Title and finally TestId
